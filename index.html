@@ -109,6 +109,7 @@
       background-color: #212121 !important; /* Important to override other styles */
     }
 
+    /* Press me button styles */
     #pressMeButton {
       position: absolute;
       top: 10px;
@@ -127,14 +128,13 @@
 
   <header>
     <div class="logo">
-      <img src="images/FGTPlayfavicon.png" alt="FGTPlay Logo.">
+      <img src="images/FGTPlayfavicon.png" alt="FGTPlay Logo">
     </div>
     <h1>FGTPlay</h1>
-    <p>Welcome to FGTPlay! This is the new official website, enjoy!!</p>
+    <p>(Previously known as Trey/Tazbuch's Games) You can also play FGTPlay by just going on https://tazbuch.space</p>
     <button class="exit-button" onclick="toggleDarkMode()">Enable Dark Mode 🕶(Press to turn on and off)</button>
-    </div>
     <button class="settings-button" onclick="openSettings()">Settings</button>
-    </div>
+    <button id="pressMeButton">Press me</button>
     <div id="settingsModal" class="modal" style="display: none;">
       <h2>Settings</h2>
       <h3>Page Theme</h3>
@@ -143,45 +143,6 @@
       <button class="exit-button" onclick="toggleTabName('IXL')">IXL Hider</button>
       <button class="exit-button" onclick="toggleTabName('Google Classroom')">Google Classroom Hider</button>
       <button class="exit-button" onclick="closeSettings()">Exit</button>
-    </div>
-    <button onclick="openGame()">open in about:blank</button> <--(use this so it wont show in your history)
-    <script>
-      function openGame() {
-        var win = window.open();
-        var url = "https://fgtplay.lol";
-        var iframe = win.document.createElement("iframe");
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.border = "none";
-        iframe.src = url;
-        win.document.body.appendChild(iframe);
-      }
-    </script>
-    </div>
-
-    <script>
-      function openSettings() {
-        document.getElementById("settingsModal").style.display = "block";
-      }
-
-      function closeSettings() {
-        // Here you can add code to save settings if needed
-        document.getElementById("settingsModal").style.display = "none";
-      }
-
-      function toggleTabName(tabName) {
-        document.title = tabName;
-        if (tabName === 'IXL') {
-          document.querySelector("link[rel='icon']").href = "https://raw.githubusercontent.com/tazbuch/tazbuch.github.io/main/ixl.png";
-        } else if (tabName === 'Google Classroom') {
-          document.querySelector("link[rel='icon']").href = "https://example.com/google-classroom-favicon.png"; // Replace with actual favicon URL
-        }
-      }
-
-      function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-      }
-    </script>
     </div>
   </header>
 
@@ -259,19 +220,19 @@
       document.title = tabName;
       if (tabName === 'IXL') {
         document.querySelector("link[rel='icon']").href = "https://raw.githubusercontent.com/tazbuch/tazbuch.github.io/main/ixl.png";
-      } else if (tabName === 'Home') {
-        document.querySelector("link[rel='icon']").href = "data:image/jpeg;base64,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"; // Replace with actual favicon URL
+      } else if (tabName === 'Google Classroom') {
+        document.querySelector("link[rel='icon']").href = "https://example.com/google-classroom-favicon.png"; // Replace with actual favicon URL
       }
     }
 
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
-    <script>
+  </script>
 
-    <script>
+  <script>
     document.getElementById("pressMeButton").addEventListener("click", function() {
-      window.open("https://fgtplay.lol/video.mp4/", "_blank");
+      window.open("https://fgtplay.lol/video.mp4", "_blank");
     });
   </script>
 
