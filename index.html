@@ -264,6 +264,7 @@
 
   <!-- Other games modal -->
   <div id="otherGamesModal" class="modal" style="display: none;">
+    <button class="other-games2-button" onclick="openOtherGames()">Other Games</button>   
     <button class="other-games-button" onclick="openOtherGames()">Other Games</button>
     <button class="exit-button" onclick="closeAdminPage()">Exit</button>
   </div>
@@ -299,6 +300,7 @@
       if (password === "sigma") {
         document.getElementById("adminLoginModal").style.display = "none";
         document.getElementById("otherGamesModal").style.display = "block";
+        document.getElementById("otherGames2Modal").style.display = "block";
       } else {
         alert("You goober, it's wrong!");
       }
@@ -307,10 +309,14 @@
     function closeAdminPage() {
       document.getElementById("adminLoginModal").style.display = "none";
       document.getElementById("otherGamesModal").style.display = "none";
+      document.getElementById("otherGames2Modal").style.display = "none";
     }
 
     function openOtherGames() {
-      window.location.href = "https://fgtplay.lol/testing/ws";
+      window.location.href = "https://fgtplay.lol/game";
+    }
+    function openOtherGames2() {
+      window.location.href = "https://fgtplay.lol/gm";
     }
   </script>
 

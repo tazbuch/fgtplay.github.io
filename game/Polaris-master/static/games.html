@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--el:meta-->
+  <!--el:adtop-->
+  <!--el:analytics-->
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <title>Games | Polaris</title>
+</head>
+
+<body>
+  <!--el:navbar-->
+  <!--el:sidebar-->
+
+  <script>
+    window['nitroAds'].createAd('outstreamplayer1', {
+      "refreshTime": 30,
+      "format": "floating",
+      "report": {
+        "enabled": true,
+        "icon": true,
+        "wording": "Report Ad",
+        "position": "top-left"
+      }
+    });
+  </script>
+
+  <div class="content centered">
+    <h1 style="font-size: 6vh;">Games</h1>
+
+    <div class="popular-games">
+    </div>
+
+    <h1 style="font-size: 4vh;" class="gamesectionheader">All Games <small style="font-size: 2vh;">(200+ 🎉)</small></h1>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search Games">
+      
+      <button id="randomGame" title="Play a random game">
+        <i class="fa-solid fa-dice"></i>
+      </button>
+
+      <select id="searchSort" title="Sort the games">
+        <option value="none" selected>Don't Sort</option>
+        <option value="newest">Newest</option>
+        <option value="abc">Alphabetical</option>
+      </select>
+    </div>
+
+    <br>
+
+    <!--el:ad_horizontal-->
+
+    <div class="games">
+    </div>
+
+    <div class="searchErr hidden">
+      <h1 class="title">¯\(°_o)/¯</h1>
+      <br>
+      <p>Oops, we couldn't find the game you were looking for.</p>
+    </div>
+
+    <!--el:discord_widget-->
+
+    <script src="/assets/js/main.js" type="module"></script>
+
+    <!--el:{{mode === 'dev'}}:development-->
+</body>
+
+</html>

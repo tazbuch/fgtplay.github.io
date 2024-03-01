@@ -1,0 +1,86 @@
+.sidebar {
+  position: fixed;
+  margin-top: calc(calc(9vh + 2.5em) + 100px);
+  bottom: 50px;
+  top: 0;
+  right: -60vh;
+  width: 50vh;
+  background-color: var(--background-darker);
+  border-radius: 2vh;
+  box-shadow: 0vh 0.75vh 1.5vh 0vh var(--shadow-color);
+  text-align: center;
+  z-index: 100;
+  overflow-y: auto;
+  padding: 1vh;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+}
+
+.sidebar.active {
+  right: 50px;
+  transition: all 0.5s ease;
+}
+
+.sidebar>.scroll {
+  position: fixed;
+  box-shadow: 0.5vh 0.5vh 1vh 0vh var(--shadow-color);
+  border-radius: 1vh;
+  cursor: pointer;
+  background-color: var(--solid);
+  width: 50vh;
+  height: 0vh;
+  transition: 0.4s;
+  margin: auto;
+  top: 87vh;
+  opacity: 0;
+  z-index: 9999999999999999999;
+  display: none;
+}
+
+.sidebar>.scroll.active {
+  opacity: 1;
+  height: 4vh;
+}
+
+.sidebar>.scroll>span {
+  font-size: 4vh;
+  margin: auto;
+}
+
+.sidebar>.settings-button {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-top: 2vh;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  box-shadow: 0.5vh 0.5vh 1vh 0vh var(--shadow-color);
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+.sidebar h3 {
+  margin-bottom: 0vh;
+}
+
+.quick-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.settings-button {
+  min-width: 7vh;
+  margin: 0.5vh;
+}

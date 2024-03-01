@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Android OS",
+        "image": "/cdn/images/android.png",
+        "target": "https://now.gg/iframe/snippet?app_pkg=com.uncube.launcher3&partner=skool"
+    },
+    {
+        "name": "Spotify",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/168px-Spotify_logo_without_text.svg.png",
+        "target": "https://open.spotify.com/"
+    },
+    {
+        "name": "ChatGPT",
+        "image": "/cdn/images/chatgpt.webp",
+        "target": "https://chat.shuttleai.app"
+    },
+    {
+        "name": "Chess.com",
+        "image": "https://play-lh.googleusercontent.com/a7R5nyeaX8lIEWdBOxjlvbyq9LcFwh3XMvNtBPEKR3LPGgdvgGrec4sJwn8tUaaSkw",
+        "target": "https://chess.com/"
+    },
+    {
+        "name": "Coolmath Games",
+        "image": "https://play-lh.googleusercontent.com/I3hW7sKSGtOKeTpmsBxka7Eyul5HXTZUD4H3EbJEWyW-4vDlpyEG5Jtu9D8JgR0__g",
+        "target": "https://coolmathgames.com/"
+    },
+    {
+        "name": "Discord",
+        "image": "/cdn/images/discord.png",
+        "target": "https://discord.com/app"
+    },
+    {
+        "name": "Messenger",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png",
+        "target": "https://messenger.com/"
+    },
+    {
+        "name": "Emulator",
+        "image": "https://emulatorjs.org/media/logo-light.png",
+        "target": "https://demo.emulatorjs.org/"
+    },
+    {
+        "name": "GeoFS",
+        "image": "https://www.geo-fs.com/images/media/logo/icon.png",
+        "target": "https://www.geo-fs.com/"
+    },
+    {
+        "name": "Movies/TV",
+        "image": "https://avatars.githubusercontent.com/u/121455091",
+        "target": "//movie-web.app"
+    },
+    {
+        "name": "Paramount+",
+        "image": "https://play-lh.googleusercontent.com/oi4GE8ulxHp4Y2xVzKu_WAMrgE4Jj4Kbdd7hAWLeoZTsMtC5bYTd2xcYhlvMk69pTFY",
+        "target": "https://www.paramountplus.com/account/signin/"
+    },
+    {
+        "name": "Pinterest",
+        "image": "https://static-00.iconduck.com/assets.00/pinterest-icon-2048x2048-d7p0u7c5.png",
+        "target": "https://pinterest.com/"
+    },
+    {
+        "name": "Tiktok",
+        "image": "/cdn/images/tiktok.png",
+        "target": "https://www.tiktok.com/en/"
+    },
+    {
+        "name": "Twitch",
+        "image": "/cdn/images/twitch.png",
+        "target": "https://www.twitch.tv/"
+    },
+    {
+        "name": "Youtube",
+        "image": "/cdn/images/youtube.png",
+        "target": "https://youtube.com"
+    },
+    {
+        "name": "Youtube Music",
+        "image": "/cdn/images/yt-music.png",
+        "target": "https://music.youtube.com"
+    }
+]

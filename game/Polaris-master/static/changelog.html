@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--el:meta-->
+    <!--el:adtop-->
+    <!--el:analytics-->
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <title>Polaris</title>
+</head>
+
+<body>
+    <!--el:navbar-->
+    <!--el:sidebar-->
+
+    <div class="row mainpage" style="width: 100%;">
+        <div class="container full" style="text-align: left; margin-right: 50px; width: 100%; overflow: scroll; text-align: center;">
+            <h1>Changelog</h1>
+
+            <div id="changelog"></div>
+
+            <br><br>
+            <hr>
+
+            <p>
+                Running Polaris <span id="changelog_version">unknown</span>
+
+                <br>
+                <br>
+                
+                <small>
+                    Commit: <span id="changelog_version_sha">unknown</span>
+                    <br>
+                    Up to Date: <span id="changelog_up_to_date">no</span>
+                    <br>
+                    Server Mode: <span id="changelog_mode">unknown</span>
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js" type="module"></script>
+    <script src="/assets/js/changelog.js" type="module"></script>
+
+    <!--el:{{mode === 'dev'}}:development-->
+</body>
+
+</html>

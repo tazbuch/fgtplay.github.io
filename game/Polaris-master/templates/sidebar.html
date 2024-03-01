@@ -1,0 +1,93 @@
+<div class="sidebar">
+    <div class="scroll">
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <h1>Settings</h1>
+
+    <h3>Panic Key</h3>
+
+    <input class="settings-input" type="text" name="Panic Key" id="panic_key" value="Click and press any key" readonly />
+    <button class="settings-button" id="reset_panic">Reset</button>
+
+    <br>
+
+    <h3>Panic URL</h3>
+
+    <input class="settings-input" type="url" id="panic_url" placeholder="eg: https://google.com" />
+
+    <br>
+
+    <h3>Theme</h3>
+
+    <div id="themes">
+        <button class="settings-button">Dark</button>
+        <button class="settings-button">Light</button>
+        <button class="settings-button">Flamingo</button>
+        <button class="settings-button">Frost</button>
+        <button class="settings-button">Crimson</button>
+        <button class="settings-button">Inferno</button>
+        <button class="settings-button">Indigo</button>
+        <button class="settings-button">Violet</button>
+        <button class="settings-button">Cyan</button>
+        <button class="settings-button">Bronze</button>
+    </div>
+
+    <h3>Tab Cloak</h3>
+
+    <select id="cloak_select">
+        <option value="none">None</option>
+        <option value="custom">Custom</option>
+        <option value="canvas">Canvas Dashboard</option>
+        <option value="google">Google</option>
+        <option value="classroom">Google Classroom</option>
+    </select>
+
+    <div class="hidden" id="custom_cloak">
+        <input class="settings-input" type="text" placeholder="Title" id="title" />
+        <input class="settings-input" type="text" placeholder="eg: google.com" id="domain" />
+    </div>
+
+    <h3>Proxy</h3>
+
+    <select id="proxy_select">
+        <option value="uv">Ultraviolet</option>
+        <option value="dynamic" disabled>Dynamic</option>
+    </select>
+
+    <h3>Prevent close</h3>
+
+    <div class="switch">
+        <input type="checkbox" id="prevent_close">
+        <span class="slider"></span>
+    </div>
+
+    <h3 style="margin-top: 0px;">Export/Import Data</h3>
+
+    <small id="export_error"></small>
+
+    <br>
+
+    <div>
+        <button class="settings-button nomargin" id="export">Export</button>
+        <button class="settings-button nomargin" id="import">Import</button>
+        <br>
+        <button class="settings-button nomargin" id="clear">Clear Data</button>
+    </div>
+
+    <br>
+    <hr>
+
+    <p>
+        Running Polaris <span id="version">unknown</span>
+        <br>
+        <br>
+        <small>
+            Commit: <span id="version_sha">unknown</span>
+            <br>
+            Up to Date: <span id="up_to_date">no</span>
+            <br>
+            Server Mode: <span id="mode">unknown</span>
+        </small>
+    </p>
+</div>

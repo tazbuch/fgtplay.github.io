@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--el:meta-->
+  <!--el:adtop-->
+  <!--el:analytics-->
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <title>Apps | Polaris</title>
+</head>
+
+<body>
+  <!--el:navbar-->
+  <!--el:sidebar-->
+
+  <div class="content centered">
+    <h1>Apps</h1>
+    <br>
+    <div class="apps"></div>
+
+  </div>
+  <br>
+  <br>
+  <div id="largebillboard1"></div>
+
+  <script>
+    window['nitroAds'].createAd('largebillboard1', {
+      "refreshTime": 30,
+      "renderVisibleOnly": true,
+      "sizes": [
+        [
+          "970",
+          "250"
+        ]
+      ],
+      "report": {
+        "enabled": true,
+        "icon": true,
+        "wording": "Report Ad",
+        "position": "top-right"
+      }
+    });
+  </script>
+
+  <!--el:discord_widget-->
+
+  <script src="/assets/js/main.js" type="module"></script>
+
+  <!--el:{{mode === 'dev'}}:development-->
+</body>
+
+</html>

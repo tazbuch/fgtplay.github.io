@@ -1,0 +1,17 @@
+{
+  {
+    "name": "Nativegames",
+    "description": "Free Arcade Games!",
+    "short_name": "Native",
+    "start_url": "/",
+    "lang": "en-US",
+    "theme_color": "#0275d8",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "images/native.png",
+        "sizes": "195x253",
+        "type": "image/png"
+      }
+    ]
+  }

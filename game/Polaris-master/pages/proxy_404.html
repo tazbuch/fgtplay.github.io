@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--el:meta-->
+    <!--el:adtop-->
+    <!--el:analytics-->
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <title>Loading... | Polaris</title>
+</head>
+
+<body>
+    <div class="container centered">
+        <h1 style="font-size: 50px;">Loading</h1>
+
+        <p>
+            Loading the proxy...
+        </p>
+    </div>
+
+    <script type="module">
+        import { loadProxyWorker, storage } from '/assets/js/utils.js';
+
+        const settingsStorage = storage('settings');
+
+        try { document.body.dataset.theme = JSON.parse(localStorage.getItem('settings')).theme || 'system-default'; }
+        catch {
+            document.body.dataset.theme = 'system-default';
+            sessionStorage.setItem('settings', JSON.stringify({
+                theme: 'system-default'
+            }));
+        }
+
+        if (location.pathname.slice(1).startsWith(settingsStorage.get('proxy') || 'uv')) loadProxyWorker(settingsStorage.get('proxy') || 'uv')
+            .then(() => location.reload())
+            .catch(() => {
+                document.querySelector('h1').textContent = 'Error';
+                document.querySelector('p').textContent = 'Failed to load proxy';
+            });
+        else {
+            document.documentElement.innerHTML = await (await fetch('/404')).text();
+            await import('/assets/js/main.js');
+        }
+    </script>
+
+    <!--el:{{mode === 'dev'}}:development-->
+</body>
+
+</html>
