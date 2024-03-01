@@ -47,7 +47,8 @@
       position: relative;
     }
 
-    .settings-button {
+    .settings-button,
+    .admin-button {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -121,6 +122,52 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    /* Admin login modal styles */
+    #adminLoginModal {
+      background-color: #000;
+      color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      width: 80%;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      display: none;
+    }
+
+    input[type="password"] {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      width: 80%;
+    }
+
+    .login-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .other-games-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -134,6 +181,7 @@
     <p>(Previously known as Trey/Tazbuch's Games) You can also play FGTPlay by just going on https://tazbuch.space</p>
     <button class="exit-button" onclick="toggleDarkMode()">Enable Dark Mode 🕶(Press to turn on and off)</button>
     <button class="settings-button" onclick="openSettings()">Settings</button>
+    <button class="admin-button" onclick="openAdminLogin()">Admin Page</button>
     <button id="pressMeButton">Press me</button>
     <div id="settingsModal" class="modal" style="display: none;">
       <h2>Settings</h2>
@@ -206,13 +254,30 @@
     <button class="exit-button" onclick="closeSettings()">Exit</button>
   </div>
 
+  <!-- Admin login modal -->
+  <div id="adminLoginModal">
+    <h2>What is the password?</h2>
+    <input type="password" id="adminPassword" placeholder="Enter password">
+    <button class="login-button" onclick="checkPassword()">Login</button>
+    <button class="exit-button" onclick="closeAdminPage()">Exit</button>
+  </div>
+
+  <!-- Other games modal -->
+  <div id="otherGamesModal" class="modal" style="display: none;">
+    <button class="other-games-button" onclick="openOtherGames()">Other Games</button>
+    <button class="exit-button" onclick="closeAdminPage()">Exit</button>
+  </div>
+
   <script>
     function openSettings() {
       document.getElementById("settingsModal").style.display = "block";
     }
 
+    function openAdminLogin() {
+      document.getElementById("adminLoginModal").style.display = "block";
+    }
+
     function closeSettings() {
-      // Here you can add code to save settings if needed
       document.getElementById("settingsModal").style.display = "none";
     }
 
@@ -228,6 +293,25 @@
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
+
+    function checkPassword() {
+      var password = document.getElementById("adminPassword").value;
+      if (password === "sigma") {
+        document.getElementById("adminLoginModal").style.display = "none";
+        document.getElementById("otherGamesModal").style.display = "block";
+      } else {
+        alert("You goober, it's wrong!");
+      }
+    }
+
+    function closeAdminPage() {
+      document.getElementById("adminLoginModal").style.display = "none";
+      document.getElementById("otherGamesModal").style.display = "none";
+    }
+
+    function openOtherGames() {
+      window.location.href = "https://fgtplay.lol/testing/ws";
+    }
   </script>
 
   <script>
@@ -239,3 +323,4 @@
 </body>
 
 </html>
+
