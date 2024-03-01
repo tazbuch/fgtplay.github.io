@@ -1,0 +1,1642 @@
+@import url("common.css");
+
+#error, noscript>div {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	margin: 20px auto;
+	color: #ff0000;
+	border: 1px solid #ff0000;
+	border-radius: 10px;
+	z-index: 10;
+	background: #ffe0e0;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#error {
+	display: none;
+}
+
+#navigation-bar {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	cursor: default;
+	background: #f0f0f0;
+	user-select: none;
+}
+
+#logo {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 50px;
+	left: 10px;
+	background-image: url("res/logo.svg");
+	background-size: 200px 50px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#status {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 30px;
+	top: 10px;
+	left: 220px;
+	cursor: default;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 30px;
+	letter-spacing: 0px;
+}
+
+#version {
+	position: absolute;
+	display: block;
+	width: auto;
+	height: 30px;
+	top: 10px;
+	left: 330px;
+	color: #808080;
+	cursor: default;
+	font-size: 12px;
+	line-height: 30px;
+	letter-spacing: 0px;
+}
+
+#side-menu, #hamb {
+	display: none;
+}
+
+#nav-bar {
+	position: absolute;
+	display: block;
+	right: 0px;
+	width: auto;
+	height: 30px;
+	padding: 10px;
+}
+
+#nav-bar>button, #game-category>button {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: 20px;
+	padding: 5px 0px;
+	margin: 0px 15px;
+	color: #808080;
+	border: none;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#nav-bar>button:hover, #game-category>button:hover {
+	color: #a0a0a0;
+}
+
+#nav-bar>button:active, #game-category>button:active {
+	color: #c0c0c0;
+}
+
+#nav-bar>button[current], #game-category>button[current] {
+	color: #303030;
+	font-weight: 600;
+}
+
+#game-category>button[unread]::after {
+	position: relative;
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin: 0px 2px;
+	top: 0px;
+	content: "";
+	background: #ff0000;
+	border-radius: 5px;
+	vertical-align: top;
+}
+
+#accn-btn::before {
+	position: relative;
+	display: inline-block;
+	width: 3px;
+	height: 20px;
+	padding: 0px 10px;
+	content: "";
+	border-left: 3px solid #808080;
+	vertical-align: middle;
+}
+
+@media all and (max-width: 600px) {
+	#hamb {
+		position: relative;
+		display: block;
+		width: fit-content;
+		height: fit-content;
+		float: right;
+		padding: 24px 15px;
+	}
+
+	#hamb>div {
+		position: relative;
+		display: block;
+		width: 20px;
+		height: 2px;
+		margin: 0px 5px;
+		background: #303030;
+	}
+
+	#hamb>div::before, #hamb>div::after {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		content: "";
+		background: #303030;
+		transition: transform 0.2s ease-out;
+	}
+	
+	#hamb>div::before {
+		top: 6px;
+	}
+	
+	#hamb>div::after {
+		top: -6px;
+	}
+
+	#nav-bar {
+		display: none;
+		width: auto;
+		height: auto;
+		top: 50px;
+		right: 5px;
+		z-index: 2;
+		background: #c0c0c0;
+	}
+
+	#nav-bar>button {
+		display: block;
+	}
+
+	#side-menu:checked ~ #nav-bar {
+		display: block;
+	}
+
+	#side-menu:checked ~ #hamb>div {
+		background: rgba(0, 0, 0, 0);
+	}
+
+	#side-menu:checked ~ #hamb>div::before {
+		top: 0px;
+		transform: rotate(-45deg);
+	}
+
+	#side-menu:checked ~ #hamb>div::after {
+		top: 0px;
+		transform: rotate(45deg);
+	}
+}
+
+#loading {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 20px;
+	top: 60px;
+	left: 0px;
+	background: #ffffff;
+	text-align: center;
+	line-height: 20px;
+	font-weight: 500;
+	letter-spacing: 0px;
+}
+
+#loading::after {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 50px;
+	top: -60px;
+	right: 0px;
+	content: "";
+	background: #f0f0f0;
+}
+
+#content {
+	position: absolute;
+	display: none;
+	width: calc(100% - 20px);
+	height: calc(100% - 90px);
+	bottom: 0px;
+	padding: 20px 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#content>div {
+	position: relative;
+	display: none;
+	width: 760px;
+	height: fit-content;
+	padding: 20px;
+	margin: 10px auto 20px;
+}
+
+#content>div[current], #unbl-content[current] {
+	display: block;
+}
+
+#content>div>h1 {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	margin: 80px auto 40px;
+}
+
+#banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: unset;
+	margin: 0px 0px 50px;
+	aspect-ratio: 4/1;
+	background-image: url("res/logo.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#banner::after {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 36px;
+	right: 30px;
+	bottom: 0px;
+	content: "Unblocked Games";
+	color: #808080;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 36px;
+	letter-spacing: 0px;
+}
+
+.text-body {
+	position: relative;
+	display: block;
+	width: calc(100% - 20px);
+	height: fit-content;
+	padding: 10px;
+}
+
+.text-body>* {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 10px 0px;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.text-body>h1 {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.text-body>h2 {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.text-body>h3 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.text-body>hr {
+	width: 100%;
+	height: unset;
+	margin: 15px 0px 25px;
+	border: none;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.text-body>p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.text-body>code {
+	position: relative;
+	display: block;
+	width: calc(100% - 20px);
+	height: fit-content;
+	padding: 10px;
+	outline: none;
+	font-size: 10px;
+	font-family: monospace;
+	line-height: 10px;
+	letter-spacing: -1px;
+	overflow-wrap: break-word;
+}
+
+#game-search, #yt-search {
+	position: relative;
+	display: block;
+	width: 400px;
+	height: 40px;
+	margin: 20px auto;
+	border: 1px solid #808080;
+}
+
+@media all and (max-width: 420px) {
+	#game-search, #yt-search {
+		width: calc(100% - 20px);
+		margin: 20px 10px;
+	}
+}
+
+#game-search>input, #yt-search>input {
+	position: absolute;
+	display: block;
+	width: calc(100% - 52px);
+	height: 20px;
+	top: 10px;
+	left: 10px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#game-search>button, #yt-search>button {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+	border: none;
+	outline: none;
+	background-image: url("res/search.svg");
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#game-category {
+	position: relative;
+	display: block;
+	width: calc(100% - 2px);
+	height: fit-content;
+	margin: 30px 0px;
+	border: 1px solid #c0c0c0;
+	border-radius: 15px;
+	background: #f0f0f0;
+}
+
+#game-widget {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 200px;
+	margin: 30px 0px;
+	overflow: hidden;
+}
+
+#game-container {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	margin: 30px 0px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 12px;
+	row-gap: 10px;
+}
+
+#game-container>div {
+	position: relative;
+	display: block;
+	width: 140px;
+	height: 140px;
+	flex: 0 0 140px;
+	cursor: pointer;
+	border: 1px solid #c0c0c0;
+	border-radius: 15px;
+	background-size: 140px 105px;
+	background-color: #f0f0f0;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#game-container>div:hover {
+	border-color: #808080;
+}
+
+#game-container>div:active {
+	border-color: #303030;
+}
+
+#game-container>div>label {
+	position: relative;
+	display: block;
+	width: 45px;
+	height: 16px;
+	margin: 5px 2px 2px 88px;
+	padding: 2px 5px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 16px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+#game-container>div>div {
+	position: absolute;
+	display: block;
+	width: 130px;
+	height: 25px;
+	padding: 5px;
+	top: 105px;
+	color: #606060;
+	font-size: 12px;
+	text-align: center;
+	line-height: 12px;
+	letter-spacing: 0px;
+}
+
+#game-navigator {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 30px auto;
+	border: 1px solid #303030;
+	background: #f0f0f0;
+}
+
+#game-navigator>button {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	outline: none;
+	vertical-align: top;
+	background-size: 30px 30px;
+	background-color: #c0c0c0;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+
+#game-navigator>button:disabled {
+	cursor: default;
+	filter: brightness(200%) contrast(40%);
+	border-color: #c0c0c0;
+}
+
+#game-navigator>button:not(:disabled):active {
+	border-top-color: #808080;
+	border-left-color: #808080;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+
+#gnav-back {
+	background-image: url("res/back.svg");
+}
+
+#gnav-forward {
+	background-image: url("res/forward.svg");
+}
+
+#game-navigator>div {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: 20px;
+	padding: 5px 10px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 0px;
+	vertical-align: top;
+}
+
+#game-navigator>div>input {
+	position: relative;
+	display: inline;
+	width: 40px;
+	height: fit-content;
+	border: none;
+	outline: none;
+	font-size: 12px;
+	text-align: end;
+	line-height: 20px;
+	border-bottom: 1px solid #808080;
+}
+
+#game-navigator>div>input:focus {
+	border-bottom: 1px solid #303030;
+}
+
+#game-notice {
+	position: relative;
+	display: block;
+	width: calc(100% - 10px);
+	height: fit-content;
+	margin: 30px 0px 10px;
+	color: #808080;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: 0px;
+}
+
+#game-disclaimer {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 20px 0px;
+	color: #808080;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#submit-game, #startemu {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px 20px;
+	margin: 15px 20px;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid #808080;
+	border-radius: 25px;
+	box-shadow: 2px 2px #808080;
+	background: #005a5a;
+}
+
+#submit-game:focus, #startemu:focus {
+	border-color: #303030;
+}
+
+#submit-game:active, #startemu:active {
+	box-shadow: -2px -2px #808080;
+}
+
+#chatgpt-page>div {
+	border: 1px solid #c0c0c0;
+}
+
+#dialog {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: calc(100% - 50px);
+	background: #f0f0f0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#dialog>div {
+	position: relative;
+	display: block;
+	width: calc(100% - 40px);
+	height: fit-content;
+	margin: 15px 0px;
+	padding: 10px 20px;
+}
+
+#dialog>div>img {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	margin: 0px 15px 0px 5px;
+	user-select: none;
+	vertical-align: top;
+}
+
+#dialog>div>div {
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 60px);
+	height: fit-content;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	white-space: pre-wrap;
+	letter-spacing: 0px;
+	vertical-align: top;
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
+#dialog>span {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 15px auto;
+	padding: 5px;
+	color: #ff0000;
+	border: 1px solid #ff0000;
+	background: #ffe0e0;
+}
+
+#interface {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 50px;
+	bottom: 0px;
+	background: #e0e0e0;
+}
+
+#delmsg {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	top: 5px;
+	left: 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 25px;
+	background-image: url("res/delete.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#delmsg:hover {
+	background-color: #d0d0d0;
+}
+
+#delmsg:active {
+	background-color: #c0c0c0;
+}
+
+#chatgpt {
+	position: absolute;
+	display: block;
+	width: calc(100% - 90px);
+	height: 40px;
+	top: 5px;
+	left: 80px;
+	border: 1px solid #808080;
+}
+
+#chatgpt>input {
+	position: absolute;
+	display: block;
+	width: calc(100% - 50px);
+	height: 20px;
+	top: 10px;
+	left: 10px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#chatgpt>button {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	right: 10px;
+	border: none;
+	outline: none;
+	background-image: url("res/send.svg");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#services-page>h2 {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 10px 0px 15px;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#services-page>hr {
+	margin: 10px 0px 30px;
+	border: none;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+#yt-option-bar {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 10px auto;
+}
+
+#yt-option-bar>label {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: 24px;
+	margin: 0px 2px 0px 8px;
+	color: #808080;
+	line-height: 24px;
+	vertical-align: top;
+}
+
+#yt-option-bar>input, #yt-option-bar>select {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: 20px;
+	padding: 1px 2px;
+	border: 1px solid #c0c0c0;
+	outline: none;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+#yt-option-bar>input:focus, #yt-option-bar>select:focus {
+	border-color: #808080;
+}
+
+#yt-results {
+	position: relative;
+	display: block;
+	width: calc(100% - 40px);
+	height: fit-content;
+	margin: 10px auto;
+	padding: 20px;
+}
+
+#yt-results>div {
+	position: relative;
+	display: flex;
+	width: calc(100% - 20px);
+	height: fit-content;
+	margin: 10px 0px;
+	padding: 10px;
+	cursor: pointer;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	column-gap: 10px;
+}
+
+#yt-results>div>img {
+	position: relative;
+	display: block;
+	width: 160px;
+	height: 90px;
+	flex: 0 0 160px;
+}
+
+#yt-results>div>div {
+	position: relative;
+	display: block;
+	width: calc(100% - 170px);
+	height: fit-content;
+}
+
+#yt-results>div>div>.title {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 10px 0px;
+	font-weight: 600;
+	line-height: 18px;
+}
+
+#yt-results>div>div>.desc {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 10px 0px 5px;
+	color: #808080;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+#yt-results>div>div>.time {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 5px 0px;
+	color: #c0c0c0;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+}
+
+#yt-load-more {
+	position: relative;
+	display: none;
+	width: fit-content;
+	height: fit-content;
+	margin: 30px auto;
+	padding: 10px 15px;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid #808080;
+	border-radius: 25px;
+}
+
+#yt-load-more:hover {
+	background: #f0f0f0;
+}
+
+#yt-load-more:active {
+	background: #e0e0e0;
+}
+
+#yt-api-info {
+	position: relative;
+	display: block;
+	width: calc(100% - 10px);
+	height: fit-content;
+	padding: 5px;
+	margin: 20px 0px 10px;
+	color: #808080;
+}
+
+#yt-api-info>p {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+#yt-api-info>input {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	outline: none;
+	border: 1px solid #808080;
+}
+
+#search-container, #gamemu-options {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin: 10px 0px;
+}
+
+#startemu {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 20px 0px;
+}
+
+#webemu-container {
+	position: relative;
+	display: block;
+	width: 1200px;
+	height: 1000px;
+	margin: 0px -220px;
+	overflow: hidden;
+}
+
+#webemu-container>embed {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#console {
+	position: relative;
+	display: block;
+	width: calc(100% - 22px);
+	height: 400px;
+	padding: 10px;
+	color: #323232;
+	font-size: 14px;
+	font-family: "Ubuntu Mono", monospace;
+	font-weight: 400;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid #323232;
+	background: #f0f0f0;
+}
+
+#console-output {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	tab-size: 4;
+	line-height: 18px;
+	letter-spacing: 0px;
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
+#console-output>hr {
+	border: none;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+#console-input {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#console-input>div {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	color: #808080;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#console-input>input {
+	position: absolute;
+	display: block;
+	width: calc(100% - 26px);
+	height: 20px;
+	padding: 0px 3px;
+	left: 20px;
+	border: none;
+	outline: none;
+	tab-size: 4;
+	line-height: 20px;
+	letter-spacing: -1px;
+}
+
+#community-page>embed, #chatgpt-page>div {
+	position: relative;
+	display: block;
+	width: 800px;
+	height: 600px;
+	margin: 10px -20px;
+}
+
+#settings-page>div, #gamemu-options>div {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	margin: 10px 0px;
+}
+
+#settings-page>div>label, #gamemu-options>div>label {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	margin: 0px 10px 0px 0px;
+	color: #808080;
+	line-height: 14px;
+	letter-spacing: 0px;
+	vertical-align: middle;
+}
+
+#settings-page>div>input, #settings-page>div>select, #gamemu-options>div>select {
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	padding: 5px 10px;
+	outline: none;
+	line-height: 14px;
+	letter-spacing: 0px;
+	border: 1px solid #c0c0c0;
+	border-radius: 25px;
+	vertical-align: middle;
+}
+
+#settings-page>div>input:focus, #settings-page>div>select:focus, #gamemu-options>div>select:focus {
+	border-color: #808080;
+}
+
+#left-side-widget {
+	position: absolute;
+	display: none;
+	width: calc((100% - 820px) / 2);
+	height: 1000px;
+	top: 30px;
+	left: 10px;
+	overflow: hidden;
+}
+
+#right-side-widget {
+	position: absolute;
+	display: none;
+	width: calc((100% - 820px) / 2);
+	height: 1000px;
+	top: 30px;
+	right: 10px;
+	overflow: hidden;
+}
+
+#bottom-widget {
+	position: relative;
+	display: block;
+	width: 760px;
+	height: 200px;
+	margin: 40px auto 0px;
+	padding: 20px;
+	border-top: 1px solid #808080;
+}
+
+#footer {
+	position: relative;
+	display: flex;
+	width: 760px;
+	height: fit-content;
+	margin: 40px auto 0px;
+	padding: 20px 20px 40px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	color: #808080;
+	cursor: default;
+	border-top: 1px solid #808080;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#footer>div {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+@media all and (max-width: 800px) {
+	#content>div, #bottom-widget, #footer {
+		width: calc(100% - 40px);
+	}
+
+	#community-page>embed, #chatgpt-page>div {
+		width: calc(100% + 10px);
+		margin: 10px -5px;
+		aspect-ratio: 9/18;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	#left-side-widget, #right-side-widget {
+		display: block;
+	}
+}
+
+#settings {
+	position: absolute;
+	display: block;
+	width: 48px;
+	height: 48px;
+	right: 20px;
+	bottom: 22px;
+	cursor: pointer;
+	box-shadow: 2px 2px #808080;
+	border-radius: 25px;
+	background-image: url("res/settings.svg");
+	background-size: 48px 48px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#settings:active {
+	box-shadow: -2px -2px #808080;
+}
+
+#unbl-content {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: calc(100% - 50px);
+	top: 50px;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+#tab-bar {
+	position: relative;
+	display: flex;
+	width: calc(100% - 10px);
+	height: 35px;
+	padding: 0px 5px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background: #e0e0e0;
+}
+
+#tabs {
+	position: relative;
+	display: flex;
+	width: auto;
+	height: 35px;
+	max-width: calc(100% - 35px);
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#new-tab {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 35px;
+	flex: 0 0 35px;
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	background-image: url("res/add.svg");
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#tabs>div {
+	position: relative;
+	display: block;
+	width: 250px;
+	height: 35px;
+	flex: 0 1 250px;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	overflow: hidden;
+}
+
+#tabs>div[current] {
+	background: #f0f0f0;
+}
+
+#tabs>div>img {
+	position: absolute;
+	display: block;
+	width: 19px;
+	height: 19px;
+	left: 8px;
+	top: 8px;
+}
+
+#tabs>div>div {
+	position: absolute;
+	display: block;
+	width: calc(100% - 70px);
+	height: 19px;
+	left: 35px;
+	top: 8px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 19px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	letter-spacing: 0px;
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
+#tabs>div>button {
+	position: absolute;
+	display: block;
+	width: 35px;
+	height: 35px;
+	top: 0px;
+	right: 0px;
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	background-image: url("res/close.svg");
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#toolbar {
+	position: relative;
+	display: flex;
+	width: calc(100% - 20px);
+	height: 30px;
+	padding: 5px 10px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	column-gap: 10px;
+	background: #f0f0f0;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+#back, #forward, #refresh {
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#back {
+	background-image: url("res/back.svg");
+}
+
+#forward {
+	background-image: url("res/forward.svg");
+}
+
+#refresh {
+	background-image: url("res/refresh.svg");
+}
+
+#new-tab:hover, #tabs>div>button:hover, #back:hover, #forward:hover, #refresh:hover {
+	background-color: #d0d0d0;
+}
+
+#new-tab:active, #tabs>div>button:active, #back:active, #forward:active, #refresh:active {
+	background-color: #c0c0c0;
+}
+
+#address {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 14px;
+	padding: 7px 15px;
+	flex: 0 1 100%;
+	border: 1px solid #c0c0c0;
+	border-radius: 25px;
+	outline: none;
+	background: #ffffff;
+	line-height: 15px;
+	letter-spacing: 0px;
+}
+
+#address:focus {
+	border-color: #808080;
+}
+
+#mode {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 30px;
+	flex: 0 0 200px;
+}
+
+#mode>label {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 20px;
+	top: 5px;
+	left: 0px;
+	line-height: 20px;
+	letter-spacing: 0px;
+}
+
+#mode>select {
+	position: absolute;
+	display: block;
+	width: 140px;
+	height: 24px;
+	padding: 2px 5px;
+	top: 0px;
+	left: 50px;
+	outline: none;
+	background: #ffffff;
+	line-height: 24px;
+	letter-spacing: 0px;
+	border: 1px solid #c0c0c0;
+	border-radius: 25px;
+}
+
+#mode>select:focus {
+	border-color: #808080;
+}
+
+#container {
+	position: relative;
+	display: block;
+	width: 1280px;
+	height: 720px;
+	margin: auto;
+	border: 1px solid #808080;
+	background: #ffffff;
+	image-rendering: pixelated;
+}
+
+#u-frame {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	image-rendering: pixelated;
+}
+
+#message {
+	position: absolute;
+	display: none;
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	padding: 20px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	color: #ffffff;
+	cursor: default;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 1px;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+#frame-view, #video-frame {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.7);
+	user-select: none;
+}
+
+#frame {
+	position: absolute;
+	display: block;
+	width: 1280px;
+	height: 720px;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
+	background: #ffffff;
+}
+
+@media (max-width: 1300px) and (orientation: landscape) {
+	#frame {
+		width: 90%;
+		height: unset;
+		aspect-ratio: 16/9;
+	}
+}
+
+@media (max-width: 1300px) and (orientation: portrait) {
+	#frame {
+		width: 90%;
+		height: unset;
+		aspect-ratio: 9/16;
+	}
+}
+
+#frame>embed {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+#frame-close, #video-close {
+	position: absolute;
+	display: block;
+	width: 48px;
+	height: 48px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-image: url("res/close-w.svg");
+	background-size: 48px 48px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#frame-newtab, #video-fullscreen {
+	position: absolute;
+	display: block;
+	width: 48px;
+	height: 48px;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-size: 48px 48px;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#frame-newtab {
+	background-image: url("res/newtab-w.svg");
+}
+
+#video-fullscreen {
+	background-image: url("res/fullscreen-w.svg");
+}
+
+#video {
+	position: absolute;
+	display: block;
+	width: 800px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
+	background: #000000;
+}
+
+@media all and (max-width: 850px) {
+	#video {
+		width: 95%;
+		height: unset;
+		aspect-ratio: 4/3;
+	}
+}
+
+#video>iframe {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+#submit-game-frame {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+#submit-game-frame>div {
+	position: relative;
+	display: block;
+	width: 300px;
+	height: fit-content;
+	padding: 20px;
+	margin: 70px auto;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+#submit-game-frame>div>h3 {
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 24px;
+	margin: 10px 0px;
+	font-size: 18px;
+	text-align: center;
+	line-height: 24px;
+}
+
+#submit-game-frame>div>label {
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 18px;
+	margin: 5px 0px 2px;
+	line-height: 18px;
+}
+
+#submit-game-frame>div>input {
+	position: relative;
+	display: block;
+	width: 288px;
+	height: 18px;
+	padding: 3px 5px;
+	outline: none;
+	line-height: 18px;
+	border: 1px solid #808080;
+	border-radius: 10px;
+}
+
+#submit-game-frame>div>input:focus {
+	border-color: #005a5a;
+}
+
+#submit-game-frame>div>hr {
+	margin: 10px 0px;
+	border: 1px solid #808080;
+}
+
+#submit-game-frame>div>div {
+	position: relative;
+	display: block;
+	width: 300px;
+	height: fit-content;
+	margin: 5px 0px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+#submit-game-frame>div>button {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 18px;
+	padding: 5px;
+	margin: 0px 15px;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
+	line-height: 18px;
+	border: 1px solid #808080;
+	border-radius: 10px;
+	box-shadow: 2px 2px #808080;
+	background: #005a5a;
+}
+
+#submit-game-frame>div>button:focus {
+	border-color: #303030;
+}
+
+#submit-game-frame>div>button:active {
+	box-shadow: -2px -2px #808080;
+}
+
+#error-msg {
+	position: relative;
+	display: none;
+	width: 278px;
+	height: fit-content;
+	padding: 10px;
+	margin: 10px 0px;
+	color: #ff0000;
+	border: 1px solid #ff0000;
+	border-radius: 10px;
+	background: #ffe0e0;
+}

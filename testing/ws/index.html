@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<!--
+ __          __ _      _  _          _____         _      _             
+ \ \        / /| |    (_)| |        / ____|       (_)    | |            
+  \ \  /\  / / | |__   _ | |_  ___ | (___   _ __   _   __| |  ___  _ __ 
+   \ \/  \/ /  | '_ \ | || __|/ _ \ \___ \ | '_ \ | | / _` | / _ \| '__|
+    \  /\  /   | | | || || |_|  __/ ____) || |_) || || (_| ||  __/| |   
+     \/  \/    |_| |_||_| \__|\___||_____/ | .__/ |_| \__,_| \___||_|   
+                                           | |                          
+                                           |_|                          
+	-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Referrer-Policy" content="no-referrer" />
+		<meta name="referrer" content="no-referrer" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="keywords" content="whitespider,unblocked,unlocked,unblocker,proxy,games,html5,flash,dos,free,open source" />
+		<meta name="description" content="Free open-source unblocked games website; 500+ unblocked HTML5, DOS, Flash games for school; Free game emulators; Unblocked YouTube; Unblocked ChatGPT" />
+		<meta name="theme-color" content="#005a5a" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<base href="/" target="_blank" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="manifest" type="application/json" href="manifest.json" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="res/logo96.png" />
+		<link rel="apple-touch-icon" type="image/png" sizes="128x128" href="res/logo128.png" />
+		<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="res/logo192.png" />
+		<link rel="canonical" href="https://whitespider.dev/" />
+		<title>WhiteSpider</title>
+	</head>
+	<body>
+		<div id="error">Error Message</div>
+		<noscript><div>Error: This page could not function unless JavaScript is supported and enabled in your browser.</div></noscript>
+		<div id="navigation-bar">
+			<div id="logo"></div>
+			<div id="status"></div>
+			<div id="version"></div>
+			<input id="side-menu" type="checkbox" placeholder="Navigation Menu" />
+			<label for="side-menu" id="hamb"><div></div></label>
+			<div id="nav-bar">
+				<button id="home-btn" type="button" current="true">Home</button>
+				<button id="prox-btn" type="button">Unblocker</button>
+				<button id="chai-btn" type="button">ChatGPT</button>
+				<button id="apps-btn" type="button">Apps</button>
+				<button id="chat-btn" type="button">Chat</button>
+				<button id="unbl-btn" type="button">Site is Blocked?</button>
+				<button id="accn-btn" type="button">Login</button>
+			</div>
+		</div>
+		<div id="loading">Loading...</div>
+		<div id="content">
+			<div id="home-page" current="true">
+				<div id="banner"></div>
+				<form id="game-search" action="null" method="post">
+					<input name="q" type="text" placeholder="Search Games" maxlength="50" autocomplete="off" />
+					<button type="submit" title="Search"></button>
+				</form>
+				<div id="game-category">
+					<button type="button" match="all" current="true">All</button>
+					<button type="button" match="new">&#x1f389;New</button>
+					<button type="button" match="hot">&#x1f525;Hot</button>
+					<button type="button" match="html5">HTML5</button>
+					<button type="button" match="flash">Flash</button>
+					<button type="button" match="dos">DOS</button>
+					<button type="button" match="cards">Cards</button>
+					<button type="button" match="puzzles">Puzzles</button>
+					<button type="button" match="mahjong">Mahjong</button>
+					<button type="button" match="classic">Classic</button>
+				</div>
+				<div id="game-container"></div>
+				<div id="game-navigator">
+					<button id="gnav-back" type="button" disabled="true" title="Previous page"></button>
+					<div>Page: <input id="gnav-page-no" type="number" value="0" min="1" max="999" maxlength="3" placeholder="1" /> / <span id="gnav-page-count">0</span></div>
+					<button id="gnav-forward" type="button" disabled="true" title="Next page"></button>
+				</div>
+				<div id="game-widget">
+					<ins class="adsbygoogle" data-ad-client="ca-pub-7505521340110301" data-ad-slot="8757025012" data-ad-format="auto" data-full-width-responsive="true"></ins>
+				</div>
+				<div class="text-body">
+					<h1>WhiteSpider Unblocked Games</h1>
+					<p>WhiteSpider (aka WhiteSpider Unblocked Games or WSUG) is a free open-source unblocked games website, designed for school
+						or office users who are restricted from accessing certain websites. We host and maintain this website because we believe
+						everyone should have the freedom to do whatever they would like to do.</p>
+					<p>WhiteSpider Dev is a small but ambitious development team. We aim to bring everyone online freedom without
+						any charges. If you enjoy using this website, please <b>share it with your friends</b> or <b>give a star to the
+						<a href="https://github.com/whitespider-dev/whitespider" target="_blank" rel="noopener">official GitHub repository</a></b>.
+						It is the simplest way for you to do, and the easiest way for us to achieve a better popularity.</p>
+					<p><a href="https://github.com/whitespider-dev#whitespider" target="_blank" rel="noopener">Click here</a> for more information about us.</p>
+				</div>
+				<div id="game-notice">&#x26a0; Games with a 'USER' label were added by users with the button below.
+					They have not been verified by the developers, and are not guaranteed to work properly.</div>
+				<button id="submit-game" type="button">Submit a game now</button>
+				<div id="game-disclaimer">Disclaimer: All games listed on this site are collected from other popular websites,
+					for making them accessible to restricted users.
+					If copyright violations occurred, please email <a href="mailto:admin@whitespider.dev">admin@whitespider.dev</a>.
+					We will resolve these issues as soon as possible.</div>
+			</div>
+			<div id="chatgpt-page">
+				<h1>ChatGPT</h1>
+				<div>
+					<div id="dialog"></div>
+					<div id="interface">
+						<div>
+							<button id="delmsg" type="button" title="Delete messages"></button>
+							<form id="chatgpt" action="None" method="post">
+								<input name="m" type="text" placeholder="Message" minlength="2" required="true" autocomplete="off" />
+								<button type="submit" title="Send"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="services-page">
+				<h1>Apps</h1>
+				<h2>YouTube Unblocked</h2>
+				<form id="yt-search" action="None" method="post">
+					<input name="q" type="text" placeholder="Search Video or Paste YouTube Video URL" maxlength="50" autocomplete="off" />
+					<button type="submit" title="Search"></button>
+				</form>
+				<div id="yt-option-bar">
+					<label for="yt-max-results">Results:</label>
+					<input id="yt-max-results" type="number" min="1" max="30" value="10" placeholder="10" />
+					<label for="yt-order">Order:</label>
+					<select id="yt-order">
+						<option value="date">Date</option>
+						<option value="rating">Rating</option>
+						<option value="relevance" selected="true">Relevance</option>
+						<option value="title">Title</option>
+						<option value="viewCount">View Count</option>
+					</select>
+				</div>
+				<div id="yt-results"></div>
+				<button id="yt-load-more" type="button">Load More</button>
+				<div id="yt-api-info">
+					<p>Notice: YouTube Unblocked uses Google's free API to get search results, which is limited to 10000 requests per day.
+						When it reaches the limit, an error message like 'quota exceed' would be shown, and the search function would no longer work.</p>
+					<p>As a workaround for this error, we recommend you to create and use your own API key. To do so, follow the steps below:</p>
+					<p> - Login with your personal Google account and go to <a href="https://console.cloud.google.com/apis/dashboard">Google Cloud Console</a>.</p>
+					<p> - Create or select an existing project.</p>
+					<p> - In 'APIs &amp; Services' section, click 'library'.</p>
+					<p> - Search for 'YouTube Data API v3' and enable it.</p>
+					<p> - Go back to 'APIs &amp; Services' section, then click 'credentials'.</p>
+					<p> - Click 'create credentials' at the top and select 'API key'.</p>
+					<p> - Fill in your API key below to use it.</p>
+					<label for="yt-api-key">API Key: </label>
+					<input id="yt-api-key" type="text" placeholder=" (Default) " />
+				</div>
+				<hr />
+				<h2>Game Emulator</h2>
+				<div id="gamemu-options">
+					<div>
+						<label for="emulator">Emulator:</label>
+						<select id="emulator">
+							<option value="1">Ruffle</option>
+							<option value="2">JS-DOS</option>
+							<option value="4">EmulatorJS</option>
+						</select>
+					</div>
+					<div>
+						<label for="core">System:</label>
+						<select id="core">
+							<optgroup label="Nintendo">
+								<option value="n64">N64</option>
+								<option value="nds">NDS</option>
+								<option value="nes">NES/Famicom</option>
+								<option value="snes">SNES</option>
+								<option value="gb">Game Boy</option>
+								<option value="gba">Game Boy Advance</option>
+								<option value="vb">Virtual Boy</option>
+							</optgroup>
+							<optgroup label="Sega">
+								<option value="sega32x">32X</option>
+								<option value="segaCD">CD</option>
+								<option value="segaGG">Game Gear</option>
+								<option value="segaMD">Mega Drive</option>
+								<option value="segaMS">Master System</option>
+								<option value="segaSaturn">Saturn</option>
+							</optgroup>
+							<optgroup label="Atari">
+								<option value="atari2600">2600</option>
+								<option value="atari5200">5200</option>
+								<option value="atari7800">7800</option>
+								<option value="jaguar">Jaguar</option>
+								<option value="lynx">Lynx</option>
+							</optgroup>
+							<optgroup label="Commodore">
+								<option value="c64">C64</option>
+								<option value="c128">C128</option>
+								<option value="amiga">Amiga</option>
+								<option value="pet">PET</option>
+								<option value="plus4">Plus/4</option>
+								<option value="vic20">VIC-20</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3do">3DO</option>
+								<option value="arcade">Arcade</option>
+								<option value="coleco">ColecoVision</option>
+								<option value="psx">PS1</option>
+								<option value="mame2003">MAME 2003</option>
+							</optgroup>
+							<option value="pce">NEC TurboGrafx-16/SuperGrafx/PC Engine</option>
+							<option value="pcfx">NEC PC-FX</option>
+							<option value="ngp">SNK NeoGeo Pocket</option>
+							<option value="ws">Bandai WonderSwan</option>
+						</select>
+					</div>
+					<div>
+						<label for="bios">BIOS:</label>
+						<input id="bios" type="file" />
+					</div>
+					<div>
+						<label for="game-rom">Game ROM:</label>
+						<input id="game-rom" type="file" />
+					</div>
+				</div>
+				<button id="startemu" type="button">Start Emulation</button>
+				<hr />
+				<h2>PC Emulator (32-bit)</h2>
+				<div id="webemu-container">
+					<embed type="text/plain" width="1024" height="768" src="ext/webemu/index.xht" />
+				</div>
+				<hr />
+				<h2>Private Search</h2>
+				<div id="search-container">
+					<script type="text/javascript" src="https://cse.google.com/cse.js?cx=6505c81d738124627"></script>
+					<div class="gcse-search"></div>
+				</div>
+				<hr />
+				<h2>Debug Console (for advanced users only)</h2>
+				<div id="console">
+					<div id="console-output"></div>
+					<div id="console-input">
+						<div>-></div>
+						<input type="text" value="" autocomplete="off" spellcheck="false" aria-label="Console Input" />
+					</div>
+				</div>
+			</div>
+			<div id="community-page">
+				<h1>Chat</h1>
+				<embed type="text/plain" width="1024" height="768" src="https://e.widgetbot.io/channels/998658232207814667/998658232958603266?api=3b1b9ecd-b2ee-4c3f-8996-f04e0aad3279" />
+			</div>
+			<div id="site-blocked-page">
+				<h1>Site is Blocked?</h1>
+				<div class="text-body">
+					<p>Never worry about if the website is blocked, as our developers are working on a variety of ways on bypass the restrictions.</p>
+					<p>You can have a try on the methods below to see which one works for you.</p>
+					<hr />
+					<h2>1. Use mirror links</h2>
+					<p>Most administrative softwares use a URL blacklist to block all listed websites. Switching to a new address could bypass the
+						restriction in this case as the new address is not yet known to the software. However frequently using the same address could
+						cause it being noticed by administrators, resulting it being added to the blacklist and revoke access to it.</p>
+					<p>As the result using official mirror links provided here is not recommended, and you should self-host your own mirror
+						link instead. (See method 2)</p>
+					<p>Embed mirrors (including data URLs) only work if the website is blocked by a browser extension.
+						<strong>If a network-based restriction is set, you must use a <u>standalone mirror</u>, or a custom DNS server in order to bypass the restriction.</strong></p>
+					<h3>Google Sites Embed Mirrors</h3>
+					<a href="https://sites.google.com/view/whitespider" target="_blank" rel="noopener">https://sites.google.com/view/whitespider</a>
+					<a href="https://sites.google.com/view/white-spider" target="_blank" rel="noopener">https://sites.google.com/view/white-spider</a>
+					<a href="https://sites.google.com/view/whitespi" target="_blank" rel="noopener">https://sites.google.com/view/whitespi</a>
+					<a href="https://sites.google.com/view/wsunbl" target="_blank" rel="noopener">https://sites.google.com/view/wsunbl</a>
+					<a href="https://sites.google.com/view/wsug" target="_blank" rel="noopener">https://sites.google.com/view/wsug</a>
+					<a href="https://sites.google.com/view/x999" target="_blank" rel="noopener">https://sites.google.com/view/x999</a>
+					<a href="https://sites.google.com/view/gainforschool" target="_blank" rel="noopener">https://sites.google.com/view/gainforschool</a>
+					<a href="https://sites.google.com/view/theunlockedbay" target="_blank" rel="noopener">https://sites.google.com/view/theunlockedbay</a>
+					<p>(Hint: You can also create your own mirror link on <a href="https://sites.google.com/new">Google Sites</a> using
+						<a href="https://sites.google.com/view/cbhk/embed-code">embed code</a>)</p>
+					<h3>Standalone Mirrors</h3>
+					<p>(These links might not work if whitelist restriction mode is used)</p>
+					<a href="https://whitespider.gq/" target="_blank" rel="noopener">https://whitespider.gq/</a>
+					<a href="https://whitespider.dev/" target="_blank" rel="noopener">https://whitespider.dev/</a>
+					<a href="https://whitespider.eu.org/" target="_blank" rel="noopener">https://whitespider.eu.org/</a>
+					<br />
+					<p><strong>Important Notice: Do NOT trust mirror links shared by others online. Ads and malicious code could be
+						injected, putting you into security risks.</strong></p>
+					<hr />
+					<h2>2. Use a self-hosted mirror link</h2>
+					<p>Mirror links provided here might be blocked already as they are published publicly. However you can self-host your own mirror
+						link on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, or another hosting provider that
+						works for you. (Visit the
+						<a href="https://github.com/whitespider-dev/whitespider?tab=readme-ov-file#quick-deploy">repository home page</a>
+						for some quick deploy buttons)</p>
+					<p>For hosting on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, it must be hosted on a root
+						domain (xxx.github.io). Otherwise some essential resources may fail to load.</p>
+					<hr />
+					<h2>3. Use a data URL</h2>
+					<p>The code below is a data URL of an embedded WhiteSpider mirror, it can be used to bypass most browser extensions running on
+						Chromium-based browsers (including Chrome, Edge). However it cannot be used to bypass external network restrictions.</p>
+					<code>data:application/xhtml+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgaHRtbCBQVUJMSUMgIi0vL1czQy8vRFREIFhIVE1MIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi94aHRtbDExL0RURC94aHRtbDExLmR0ZCI+PGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIGxhbmc9ImVuIj48aGVhZD48bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDtjaGFyc2V0PXV0Zi04Ii8+PG1ldGEgaHR0cC1lcXVpdj0iUmVmZXJyZXItUG9saWN5IiBjb250ZW50PSJuby1yZWZlcnJlciIvPjxtZXRhIG5hbWU9InJlZmVycmVyIiBjb250ZW50PSJuby1yZWZlcnJlciIvPjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsaW5pdGlhbC1zY2FsZT0xIi8+PGxpbmsgcmVsPSJpY29uIiB0eXBlPSJpbWFnZS94LWljb24iIGhyZWY9Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vZmF2aWNvbi5pY28iLz48bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSJkYXRhOnRleHQvY3NzO2Jhc2U2NCxZbTlrZVN4bGJXSmxaSHR3YjNOcGRHbHZianBoWW5OdmJIVjBaVHRrYVhOd2JHRjVPbUpzYjJOck8zZHBaSFJvT2pFd01DVTdhR1ZwWjJoME9qRXdNQ1U3YldGeVoybHVPakJ3ZUR0d1lXUmthVzVuT2pCd2VEdGliM0prWlhJNmJtOXVaVHR2ZG1WeVpteHZkenBvYVdSa1pXNDdmUT09Ii8+PHRpdGxlPkdvb2dsZTwvdGl0bGU+PC9oZWFkPjxib2R5PjxlbWJlZCB0eXBlPSJ0ZXh0L3BsYWluIiB3aWR0aD0iMTAyNCIgaGVpZ2h0PSI3NjgiIHNyYz0iaHR0cHM6Ly93aGl0ZXNwaWRlci5kZXYvIi8+PC9ib2R5PjwvaHRtbD4=</code>
+					<p>Data URLs work in the same way as HTTP(S) URLs, they can be opened directly in a new tab.
+						(Just copy and paste the code above into a new tab's address bar and press enter)</p>
+					<hr />
+					<h2>4. None of these above works?</h2>
+					<p>If none of the methods provided above works, it means a very strict policy is set to your environment. In this case you might need
+						to use <a href="https://sites.google.com/view/cbhk/dns-hack">DNS Hack</a>/<a href="https://sites.google.com/view/cbhk/storage-hack">Storage Hack</a>
+						if you are using a Chromebook, or a <b>portable</b> <a href="https://www.torproject.org/download/">TOR Browser</a> executable from a USB drive if you
+						are using Windows.
+					</p>
+					<p><a href="https://sites.google.com/view/cbhk/" target="_blank" rel="noopener">Click here</a> for more methods to bypass restrictions.</p>
+				</div>
+			</div>
+			<div id="accountinfo-page">
+				<button id="signout" type="button">Sign out</button>
+			</div>
+			<div id="settings-page">
+				<h1>Settings</h1>
+				<div>
+					<label for="backend-url">Backend URL:</label>
+					<input id="backend-url" type="text" placeholder=" (Default) " />
+				</div>
+				<div>
+					<label for="theme">Theme:</label>
+					<select id="theme">
+						<option value="default">Default</option>
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+					</select>
+				</div>
+				<div>
+					<label for="tab-cloaking">Tab Cloaking:</label>
+					<select id="tab-cloaking">
+						<option value="disabled">Disabled</option>
+						<option value="empty">Empty</option>
+						<option value="google">Google</option>
+						<option value="classroom">Classroom</option>
+					</select>
+				</div>
+			</div>
+			<span id="left-side-widget">
+				<ins class="adsbygoogle" data-ad-client="ca-pub-7505521340110301" data-ad-slot="7455551633" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			</span>
+			<span id="right-side-widget">
+				<ins class="adsbygoogle" data-ad-client="ca-pub-7505521340110301" data-ad-slot="3528749066" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			</span>
+			<span id="bottom-widget">
+				<ins class="adsbygoogle" data-ad-client="ca-pub-7505521340110301" data-ad-slot="5345722600" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			</span>
+			<span id="footer">
+				<div>
+					<div>©2024 WhiteSpider Dev Team. All rights reserved.</div>
+					<div>We are working hard to improve your user experience.</div>
+				</div>
+				<div>
+					<a href="https://github.com/whitespider-dev" target="_blank" rel="noopener"><img src="res/github.svg" width="36" height="36" draggable="false" title="GitHub" /></a>
+					<a href="https://discord.gg/MWCNr2ANEz" target="_blank" rel="noopener"><img src="res/discord.svg" width="36" height="36" draggable="false" title="Discord" /></a>
+					<a href="https://www.facebook.com/whitespider.dev" target="_blank" rel="noopener"><img src="res/facebook.svg" width="36" height="36" draggable="false" title="Facebook" /></a>
+					<a href="https://www.youtube.com/@whitespider-dev" target="_blank" rel="noopener"><img src="res/youtube.svg" width="36" height="36" draggable="false" title="YouTube" /></a>
+					<a href="https://www.reddit.com/r/WhiteSpider/" target="_blank" rel="noopener"><img src="res/reddit.svg" width="36" height="36" draggable="false" title="Reddit" /></a>
+				</div>
+				<div>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfm3Fzhp1R4GCidei6l-FEA2yujuXuUBf_Sd50EJ5J7GN02oQ/viewform?embedded=true" target="_blank" rel="noopener">Feedback</a><br />
+					<a href="https://github.com/whitespider-dev/whitespider" target="_blank" rel="noopener">View source</a><br />
+					<a href="https://github.com/whitespider-dev/whitespider/issues/new?asignees=&amp;labels=bug&amp;title=" target="_blank" rel="noopener">Report a bug</a><br />
+					<a href="mailto:support@whitespider.dev" target="_blank" rel="noopener">Contact us</a>
+				</div>
+			</span>
+		</div>
+		<button id="settings" type="button" title="Settings"></button>
+		<div id="unbl-content">
+			<div id="tab-bar">
+				<div id="tabs"></div>
+				<button id="new-tab" type="button" title="New Tab"></button>
+			</div>
+			<div id="toolbar">
+				<button id="back" type="button" title="Back"></button>
+				<button id="forward" type="button" title="Forward"></button>
+				<button id="refresh" type="button" title="Refresh"></button>
+				<input id="address" type="text" placeholder="Search or Type a URL" spellcheck="false" />
+				<div id="mode">
+					<label for="mode-select">Mode: </label>
+					<select id="mode-select">
+						<option value="raw-embed">Raw Embed</option>
+						<option value="puppeteer">Puppeteer</option>
+					</select>
+				</div>
+			</div>
+			<div id="container">
+				<canvas id="u-frame" width="1280" height="720" tabindex="1">
+					<div>Loading...</div>
+				</canvas>
+				<div id="message">Error</div>
+			</div>
+		</div>
+		<div id="frame-view">
+			<div id="frame"></div>
+			<button id="frame-close" type="button" title="Close"></button>
+			<button id="frame-newtab" type="button" title="Open in New Tab"></button>
+		</div>
+		<div id="video-frame">
+			<div id="video"></div>
+			<button id="video-close" type="button" title="Close"></button>
+			<button id="video-fullscreen" type="button" title="Enter Fullscreen"></button>
+		</div>
+		<div id="submit-game-frame">
+			<div>
+				<h3>Submit a game</h3>
+				<label for="game-name">Game Name:</label>
+				<input id="game-name" type="text" value="" placeholder="Example" />
+				<label for="game-url">Game URL:</label>
+				<input id="game-url" type="text" value="" placeholder="https://example.io/" />
+				<hr />
+				<div>Before you click the 'submit' button, please read through the rules below:</div>
+				<div>1. The game URL must be a valid HTML page. Other contents (eg. SWF file) are not allowed.</div>
+				<div>2. The page must be able to embed with a '&#60;embed&#62;' or '&#60;iframe&#62;' tag. (without a 'X-Frame-Options' header)</div>
+				<div>3. The game must be able to play within the frame. If you are unsure, test it with Google Sites' embed function before submitting here.</div>
+				<div>4. No copyright violations.</div>
+				<div>Failure to follow the rules above may result your game being removed by the administrators, or being permanently banned from submitting games.</div>
+				<hr />
+				<div>Once your game is submitted successfully, it will be displayed beneath the preloaded games with a 'USER' label. You cannot edit or remove
+					the game info after submitting.</div>
+				<hr />
+				<span id="error-msg">Error: Error</span>
+				<button id="cancel" type="button">Cancel</button>
+				<button id="submit" type="button">Submit</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
